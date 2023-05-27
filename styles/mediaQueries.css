@@ -1,0 +1,94 @@
+/* ----------------- MEDIAQUERIES GENERALES ----------------- */
+@media screen and (min-width:1062px) {
+    #menu-btn {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1062px) {
+    .nav-main ul.nav-menu{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        top: 0;
+        left: -1000px;
+        background-color: darkred;
+        opacity: 0.9;
+        z-index: 1;
+        width: 60%;
+        height: 100vh;
+        transform: translateX(0);
+        transition-property: transform;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.5s;
+    }
+    .nav-main ul.nav-menu.showMenu{
+        transform: translateX(980px);
+    }
+}
+
+/* ----------------- MEDIAQUERY MOBILE 0px/650px ----------------- */
+
+
+@media screen and (min-width:0) and (max-width:650px) {
+    .news-cards {
+        grid-template-columns: 1fr;
+        margin: 100px 0;
+        gap: 50px;
+    }
+    #menu-btn{
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 1.5em;
+    }
+    .news-cards img {
+        object-fit: cover;
+        object-position: center;
+        height: 200px;
+    }
+    .new-card{
+        padding-bottom: 40px;
+        border-bottom: 1px solid darkred;
+    }
+    .new-card:last-child{
+        border-bottom: none;
+    }
+    .banner .content {
+        width: 80%;
+    }
+    .banner .btn {
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        background: linear-gradient(0deg,rgba(150,1,1,1), rgba(150,1,1,0.1));
+    }
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+}
+
+/* ----------------- MEDIAQUERY MOVILE 650px/1062px ----------------- */
+@media screen and (min-width:650px) and (max-width:1062px){
+    .news-cards {
+        grid-template-columns: 1fr 1fr;
+        margin: 100px 0;
+        gap: 70px;
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        justify-items: center;
+    }
+    .footer-container ul:last-child{
+        grid-column: span 2;
+    }
+
+    .nav-menu-right {
+        font-size: 30px;
+    }
+
+}
